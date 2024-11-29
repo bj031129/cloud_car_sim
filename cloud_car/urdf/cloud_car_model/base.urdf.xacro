@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/common_inertia.xacro"/>
+    <xacro:macro name="base_xacro" params="length radius">
+        <gazebo reference="base_link">
+            <material>Gazebo/Orange</material>
+        </gazebo>
+
+        <link name="base_footprint"/>
+
+        <!-- 机器人的身体部分 -->
+        <link name="base_link">
+            <!-- 部件的外观描述 -->
+            <visual>
+                <!-- 沿着自己几何中心的偏移和旋转 -->
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <!-- 几何形状 -->
+                <geometry>
+                    <!-- 圆柱体 radius-半径 length-高 -->
+                    <cylinder radius="${radius}" length="${length}"/>
+                </geometry>
+                <!-- 材质颜色 -->
+                <material name="orange">
+                    <!-- a-透明度 -->
+                    <color rgba="1.0 0.384 0 0.8"/>
+                </material>
+            </visual>
+            <collision>
+                <!-- 沿着自己几何中心的偏移和旋转 -->
+                <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+                <!-- 几何形状 -->
+                <geometry>
+                    <!-- 圆柱体 radius-半径 length-高 -->
+                    <cylinder radius="${radius}" length="${length}"/>
+                </geometry>
+                <!-- 材质颜色 -->
+                <material name="orange">
+                    <!-- a-透明度 -->
+                    <color rgba="1.0 0.384 0 0.8"/>
+                </material>
+            </collision>
+            <xacro:cylinder_inertia m="1.0" r="${radius}" h="${length}"/>
+        </link>
+
+        <joint name="base_joint" type="fixed">
+            <origin xyz="0.0 0.0 ${length / 2.0 + 0.032 - 0.001}" rpy="0.0 0.0 0.0"/>
+            <parent link="base_footprint"/>
+            <child link="base_link"/>
+        </joint>
+    </xacro:macro>
+</robot>

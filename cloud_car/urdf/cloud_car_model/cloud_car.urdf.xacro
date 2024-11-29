@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cloud_car">
+
+<!-- base_link -->
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/base.urdf.xacro"/>
+<!-- 传感器 -->
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/sensor/imu.urdf.xacro"/>
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/sensor/camera.urdf.xacro"/>
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/sensor/laser.urdf.xacro"/>
+<!-- 执行器 -->
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/actuator/wheel.urdf.xacro"/>
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/actuator/caster.urdf.xacro"/>
+<!-- gazebo插件 -->
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/plugins/gazebo_control_plugin.xacro"/>
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/plugins/gazebo_sensor_plugin.xacro"/>
+<xacro:include filename="$(find cloud_car)/urdf/cloud_car_model/cloud_car_ros2_control.xacro"/>
+
+<xacro:base_xacro length="0.12" radius="0.10"/>
+
+<xacro:imu_xacro xyz="-0.05 0.0 0.07"/>
+<xacro:camera_xacro xyz="0.10 0.0 0.075"/>
+<xacro:laser_xacro xyz="0.0 0.0 0.10"/>
+
+<xacro:wheel_xacro wheel_name="left" xyz="0.0 0.10 -0.06"/>
+<xacro:wheel_xacro wheel_name="right" xyz="0.0 -0.10 -0.06"/>
+<xacro:caster_xacro caster_name="front" xyz="0.08 0.0 -0.076"/>
+<xacro:caster_xacro caster_name="back" xyz="-0.08 0.0 -0.076"/>
+
+<!-- <xacro:gazebo_control_plugin/> -->
+<xacro:gazebo_sensor_plugin/>
+<xacro:cloud_car_ros2_control/>
+
+</robot>
