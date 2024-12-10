@@ -1,4 +1,6 @@
 from setuptools import setup
+import os
+from glob import glob
 
 package_name = 'cloud_car_delivery'
 
@@ -10,9 +12,10 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/config', ['config/points.yaml']),
+        (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
+        (os.path.join('share', package_name, 'config'), glob('config/*')),
     ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'flask'],
     zip_safe=True,
     maintainer='bai',
     maintainer_email='3024895118@qq.com',
@@ -21,7 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'delivery_node=cloud_car_delivery.delivery_node:main'
+            'delivery_node = cloud_car_delivery.delivery_node:main',
+            'http_client_node = cloud_car_delivery.http_client_node:main',
         ],
     },
 )

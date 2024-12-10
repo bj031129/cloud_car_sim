@@ -32,7 +32,8 @@ def generate_launch_description():
     robot_state_publisher_node = launch_ros.actions.Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
-        parameters=[{'robot_description': robot_description}]
+        parameters=[{'robot_description': robot_description}],
+        output='log'
     )
 
     # 通过 IncludeLaunchDescription 包含另外一个 launch 文件
@@ -41,7 +42,7 @@ def generate_launch_description():
             [get_package_share_directory('gazebo_ros'), '/launch', '/gazebo.launch.py']
         ),
       	# 传递参数
-        launch_arguments=[('world', world_file),('verbose','true')]
+        launch_arguments=[('world', world_file),('verbose','false')],
     )
 
     # 请求 Gazebo 加载机器人
@@ -49,23 +50,26 @@ def generate_launch_description():
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=['-topic','/robot_description',
-                   '-entity','cloud_car'])
+                   '-entity','cloud_car'],
+        output='log'
+    )
     
     # 加载并激活 cloud_car_joint_state_broadcaster 控制器
     load_joint_state_controller = launch.actions.ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'start', 'cloud_car_joint_state_broadcaster'],
-        output='screen'
+        output='log'
     )
 
     # # 加载并激活 cloud_car_effort_controller 控制器
     # load_cloud_car_effort_controller = launch.actions.ExecuteProcess(
     #     cmd=['ros2', 'control', 'load_controller', '--set-state', 'start','cloud_car_effort_controller'], 
-    #     output='screen'
+    #     output='log'
     # )
     
     load_cloud_car_diff_drive_controller = launch.actions.ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'start','cloud_car_diff_drive_controller'], 
-        output='screen')
+        output='log'
+    )
     
     return launch.LaunchDescription([
         action_declare_arg_mode_path,
