@@ -15,7 +15,7 @@ def generate_launch_description():
     use_sim_time = launch.substitutions.LaunchConfiguration(
         'use_sim_time', default='true')
     map_yaml_path = launch.substitutions.LaunchConfiguration(
-        'map', default=os.path.join(cloud_car_navigation2_dir, 'maps', 'test.yaml'))
+        'map', default=os.path.join(cloud_car_navigation2_dir, 'maps', 'tianma.yaml'))
     nav2_param_path = launch.substitutions.LaunchConfiguration(
         'params_file', default=os.path.join(cloud_car_navigation2_dir, 'config', 'nav2_params.yaml'))
 
