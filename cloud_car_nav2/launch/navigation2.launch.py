@@ -35,9 +35,8 @@ def generate_launch_description():
             launch_arguments={
                 'map': map_yaml_path,
                 'use_sim_time': use_sim_time,
-                'params_file': nav2_param_path,
-                'output': 'log'
-                }.items(),
+                'params_file': nav2_param_path
+            }.items(),
         ),
         launch_ros.actions.Node(
             package='rviz2',
@@ -45,6 +44,6 @@ def generate_launch_description():
             name='rviz2',
             arguments=['-d', rviz_config_dir],
             parameters=[{'use_sim_time': use_sim_time}],
-            # parameters=[{'use_sim_time': use_sim_time},{'autostart': True}],
-            output='log'),
+            output='screen'
+        ),
     ])

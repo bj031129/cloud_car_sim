@@ -281,7 +281,9 @@ class DeliveryNode(Node):
         if self.status == 'maintenance':
             self.get_logger().info('机器人故障，取消当前目标点')
             self.cancel_goal()  # 取消当前目标点
-            
+            self.send_goal_timer.cancel()  # 取消超时检测定时器
+            self.send_goal_timer = None
+
             # 启动定时器检查状态
             if self.repair_check_timer is None:
                 self.repair_check_timer = self.create_timer(5.0, self.check_repair_status)
@@ -305,6 +307,10 @@ class DeliveryNode(Node):
             self.get_logger().info('机器人已修好，继续发送目标点')
             self.repair_check_timer.cancel()
             self.repair_check_timer = None
+            
+            # 启动超时检测
+            self.send_goal_timer = self.create_timer(5.0, self.check_send_goal_timeout)
+            self.last_nav_time = time.time()
             if self.is_navigating_to_goal:
                 self.send_goal()
             else:

@@ -130,7 +130,10 @@ class RobotSimulator:
         self.battery -= 1
         if self.battery < 0:
             self.battery = 0
-        self.logger.info(f"机器人{self.robot_id}位置更新为: 经度 {current_goal[3]}, 纬度 {current_goal[4]}")
+        if self.current_goal_index == self.goal_count - 1:
+            self.logger.info(f"机器人{self.robot_id}到达终点,正在等待取货")
+        else:
+            self.logger.info(f"机器人{self.robot_id}到达目标点{self.current_goal_index}")
 
 
     def simulate_delivery(self):
@@ -176,10 +179,10 @@ class RobotSimulator:
 
     def wait_for_pickup(self):
         """等待取货"""
+        self.logger.info(f"机器人{self.robot_id}正在等待取货")
         while self.post_pickup_status():
             time.sleep(5)
             self.update_position_and_battery()
-            self.logger.info(f"机器人{self.robot_id}正在等待取货")
 
 
     def post_pickup_status(self):
