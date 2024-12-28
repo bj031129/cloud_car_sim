@@ -91,7 +91,3 @@ ros2 run cloud_car_delivery http_server
 ## 贡献指南
 
 欢迎提交Issue和Pull Request来帮助改进项目。
-
-## 许可证
-
-MIT License 

@@ -222,10 +222,10 @@
       <pose>-6.477 1.49388 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>42 306000000</sim_time>
-      <real_time>42 512527806</real_time>
-      <wall_time>1734935434 481622075</wall_time>
-      <iterations>42306</iterations>
+      <sim_time>25 325000000</sim_time>
+      <real_time>25 353819519</real_time>
+      <wall_time>1735315821 250573910</wall_time>
+      <iterations>25325</iterations>
       <model name='House 1_clone'>
         <pose>13.2896 30.9703 0 0 -0 3.13986</pose>
         <scale>1 1 1</scale>
@@ -1711,143 +1711,143 @@
         </link>
       </model>
       <model name='person_standing'>
-        <pose>-0.535839 61.9082 0.01 -1e-06 -1e-06 1.55351</pose>
+        <pose>-0.535839 61.9082 0.01 0 1e-06 1.55352</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.535839 61.9082 0.01 -1e-06 -1e-06 1.55351</pose>
+          <pose>-0.535839 61.9082 0.01 0 1e-06 1.55352</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1.15893 -1.58845 -1.52137 1.60795 -1.27266 0.044696</acceleration>
-          <wrench>-92.7144 -127.076 -121.709 0 -0 0</wrench>
+          <acceleration>1.15722 1.58612 -1.53354 -1.60559 1.27078 0.044641</acceleration>
+          <wrench>92.5773 126.89 -122.683 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_standing_0'>
-        <pose>4.99834 46.8609 0.009999 -1e-06 1e-06 -1.64765</pose>
+        <pose>4.99834 46.8609 0.01 -1e-06 -1e-06 -1.64765</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>4.99834 46.8609 0.009999 -1e-06 1e-06 -1.64765</pose>
+          <pose>4.99834 46.8609 0.01 -1e-06 -1e-06 -1.64765</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.00947 -1.69873 -1.48034 1.72512 1.11603 -0.044915</acceleration>
-          <wrench>80.7576 -135.898 -118.427 0 -0 0</wrench>
+          <acceleration>1.23503 1.49673 -1.62996 -1.51164 1.35155 0.044108</acceleration>
+          <wrench>98.8027 119.739 -130.396 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking'>
-        <pose>2.08959 14.5287 0.009999 2e-06 1e-06 0.00285</pose>
+        <pose>2.97319 15.1166 0.010001 -1e-06 -1e-06 0.002315</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>2.08959 14.5287 0.009999 2e-06 1e-06 0.00285</pose>
+          <pose>2.97319 15.1166 0.010001 -1e-06 -1e-06 0.002315</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.955089 -1.99775 -2.79717 2.08331 1.04565 -0.104002</acceleration>
-          <wrench>76.4071 -159.82 -223.774 0 -0 0</wrench>
+          <acceleration>1.67195 -3.59528 2.73563 0.53889 1.16211 -3.03671</acceleration>
+          <wrench>133.756 -287.623 218.85 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_0'>
-        <pose>-0.831729 38.4791 0.009999 -2e-06 -1e-06 0.002501</pose>
+        <pose>-0.83173 38.4791 0.009999 -2e-06 1e-06 0.002506</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.831729 38.4791 0.009999 -2e-06 -1e-06 0.002501</pose>
+          <pose>-0.83173 38.4791 0.009999 -2e-06 1e-06 0.002506</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.967435 2.02539 -2.70148 -2.11218 -1.05929 -0.105423</acceleration>
-          <wrench>-77.3948 162.031 -216.118 0 -0 0</wrench>
+          <acceleration>0.99666 2.11371 -2.40959 -2.20506 1.09308 0.109783</acceleration>
+          <wrench>79.7328 169.097 -192.767 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone'>
-        <pose>8.21599 14.045 0.01 -1e-06 1e-06 1.53385</pose>
+        <pose>8.21599 14.045 0.009999 -2e-06 -1e-06 1.53384</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>8.21599 14.045 0.01 -1e-06 1e-06 1.53385</pose>
+          <pose>8.21599 14.045 0.009999 -2e-06 -1e-06 1.53384</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>3.52248 -1.78877 2.69011 -0.808331 -0.066515 3.03593</acceleration>
-          <wrench>281.798 -143.102 215.209 0 -0 0</wrench>
+          <acceleration>-2.07203 -0.891124 -2.66683 -2.03691 -1.20247 3.03566</acceleration>
+          <wrench>-165.763 -71.2899 -213.346 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone'>
-        <pose>16.8208 9.56353 0.010001 1e-06 1e-06 1.5333</pose>
+        <pose>16.8208 9.56353 0.009999 -2e-06 -1e-06 1.5333</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>16.8208 9.56353 0.010001 1e-06 1e-06 1.5333</pose>
+          <pose>16.8208 9.56353 0.009999 -2e-06 -1e-06 1.5333</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-3.65848 -1.5273 2.73388 -1.07836 0.226457 -3.03668</acceleration>
-          <wrench>-292.678 -122.184 218.71 0 -0 0</wrench>
+          <acceleration>-2.09479 -0.900215 -2.60644 -2.038 -1.19713 3.03022</acceleration>
+          <wrench>-167.583 -72.0172 -208.515 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_0'>
-        <pose>26.244 13.3827 0.009999 -2e-06 1e-06 1.53459</pose>
+        <pose>26.244 13.3827 0.009999 2e-06 -1e-06 1.53513</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>26.244 13.3827 0.009999 -2e-06 1e-06 1.53459</pose>
+          <pose>26.244 13.3827 0.009999 2e-06 -1e-06 1.53513</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.01854 1.04949 -2.61057 1.87317 -1.26964 -3.03249</acceleration>
-          <wrench>-161.483 83.9588 -208.846 0 -0 0</wrench>
+          <acceleration>2.00448 -1.04045 -2.65768 -1.87899 1.2779 -3.03552</acceleration>
+          <wrench>160.358 -83.2361 -212.615 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_1'>
-        <pose>37.2524 9.64997 0.009999 2e-06 -1e-06 1.53251</pose>
+        <pose>37.2524 9.64997 0.009999 -2e-06 1e-06 1.53251</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>37.2524 9.64997 0.009999 2e-06 -1e-06 1.53251</pose>
+          <pose>37.2524 9.64997 0.009999 -2e-06 1e-06 1.53251</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.98967 -1.03939 -2.70077 -1.88112 1.29213 -3.03616</acceleration>
-          <wrench>159.174 -83.1512 -216.062 0 -0 0</wrench>
+          <acceleration>-1.9939 1.0416 -2.68572 1.87849 -1.28823 -3.03591</acceleration>
+          <wrench>-159.512 83.3277 -214.858 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_2'>
-        <pose>54.3888 14.2476 0.01 -1e-06 1e-06 1.53406</pose>
+        <pose>54.3888 14.2476 0.009999 2e-06 -1e-06 1.5346</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>54.3888 14.2476 0.01 -1e-06 1e-06 1.53406</pose>
+          <pose>54.3888 14.2476 0.009999 2e-06 -1e-06 1.5346</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>3.51288 -1.78284 2.65454 -0.815424 -0.057697 3.03545</acceleration>
-          <wrench>281.03 -142.627 212.363 0 -0 0</wrench>
+          <acceleration>1.99181 -1.03521 -2.70087 -1.88552 1.28977 -3.03616</acceleration>
+          <wrench>159.345 -82.8168 -216.07 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_3'>
-        <pose>58.7634 9.81831 0.009999 2e-06 -1e-06 1.53289</pose>
+        <pose>58.7634 9.81831 0.009999 -2e-06 -1e-06 1.53235</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>58.7634 9.81831 0.009999 2e-06 -1e-06 1.53289</pose>
+          <pose>58.7634 9.81831 0.009999 -2e-06 -1e-06 1.53235</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>1.99023 -1.03872 -2.7002 -1.88182 1.29154 -3.03615</acceleration>
-          <wrench>159.218 -83.0972 -216.016 0 -0 0</wrench>
+          <acceleration>-2.08719 -0.89396 -2.61938 -2.03297 -1.18815 3.03485</acceleration>
+          <wrench>-166.975 -71.5168 -209.55 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_4'>
-        <pose>66.2305 15.2074 0.009999 -2e-06 1e-06 1.53383</pose>
+        <pose>66.2305 15.2074 0.009999 2e-06 -1e-06 1.53383</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>66.2305 15.2074 0.009999 -2e-06 1e-06 1.53383</pose>
+          <pose>66.2305 15.2074 0.009999 2e-06 -1e-06 1.53383</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1.98179 1.03194 -2.73377 1.88973 -1.29922 -3.03665</acceleration>
-          <wrench>-158.543 82.5551 -218.701 0 -0 0</wrench>
+          <acceleration>1.99055 -1.03649 -2.70254 -1.88421 1.29108 -3.03619</acceleration>
+          <wrench>159.244 -82.9195 -216.203 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_5'>
-        <pose>78.5405 9.41148 0.009999 -2e-06 1e-06 1.53488</pose>
+        <pose>78.5405 9.41148 0.009999 2e-06 -1e-06 1.53541</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>78.5405 9.41148 0.009999 -2e-06 1e-06 1.53488</pose>
+          <pose>78.5405 9.41148 0.009999 2e-06 -1e-06 1.53541</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-1.99871 1.03808 -2.67737 1.88199 -1.28333 -3.03579</acceleration>
-          <wrench>-159.897 83.0463 -214.19 0 -0 0</wrench>
+          <acceleration>1.94287 -1.00778 -2.87821 -1.91855 1.33513 -3.03879</acceleration>
+          <wrench>155.43 -80.6225 -230.257 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_6'>
-        <pose>8.38783 48.4179 0.01 -1e-06 1e-06 1.53384</pose>
+        <pose>8.38783 48.4179 0.009999 -2e-06 1e-06 1.53438</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>8.38783 48.4179 0.01 -1e-06 1e-06 1.53384</pose>
+          <pose>8.38783 48.4179 0.009999 -2e-06 1e-06 1.53438</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>3.52539 -1.79033 2.70055 -0.806489 -0.069235 3.03616</acceleration>
-          <wrench>282.031 -143.227 216.044 0 -0 0</wrench>
+          <acceleration>-2.02076 1.05121 -2.6032 1.87218 -1.26886 -3.03218</acceleration>
+          <wrench>-161.661 84.0965 -208.256 0 -0 0</wrench>
         </link>
       </model>
       <model name='person_walking_clone_clone_7'>
-        <pose>8.62912 63.5567 0.009999 -2e-06 -1e-06 1.5333</pose>
+        <pose>8.62912 63.5567 0.009999 2e-06 1e-06 1.5333</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>8.62912 63.5567 0.009999 -2e-06 -1e-06 1.5333</pose>
+          <pose>8.62912 63.5567 0.009999 2e-06 1e-06 1.5333</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.07898 -0.892782 -2.64458 -2.03465 -1.19588 3.03533</acceleration>
-          <wrench>-166.318 -71.4226 -211.566 0 -0 0</wrench>
+          <acceleration>2.06128 0.885173 -2.7055 2.04409 1.21244 3.03623</acceleration>
+          <wrench>164.903 70.8139 -216.44 0 -0 0</wrench>
         </link>
       </model>
       <model name='pine_tree'>
@@ -2198,7 +2198,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>16.7827 30.3812 85.9212 0 1.4258 1.63992</pose>
+        <pose>3.72859 11.7784 16.3158 0 1.4258 1.63992</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
